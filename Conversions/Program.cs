@@ -14,12 +14,20 @@ namespace Conversions
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
-        }
+            using(var reader = new StreamReader("Deal.csv"))
+            {
+                List<string> one = new List<string>();
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+            
+            while(!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                var values = line.Split('|');
+                one.Add(values[0]);
+
+                Console.WriteLine(string.Join("\t", one.Cast<string>().ToArray()));
+            }
+            }
+        }
     }
 }

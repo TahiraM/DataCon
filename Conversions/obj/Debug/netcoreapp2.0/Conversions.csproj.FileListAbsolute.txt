@@ -8,3 +8,13 @@
 /Users/tahiramahmood/Documents/_Git/Conversions/obj/Debug/netcoreapp2.0/Conversions.AssemblyInfo.cs
 /Users/tahiramahmood/Documents/_Git/Conversions/obj/Debug/netcoreapp2.0/Conversions.dll
 /Users/tahiramahmood/Documents/_Git/Conversions/obj/Debug/netcoreapp2.0/Conversions.pdb
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/bin/Debug/netcoreapp2.0/Conversions.deps.json
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/bin/Debug/netcoreapp2.0/Conversions.runtimeconfig.json
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/bin/Debug/netcoreapp2.0/Conversions.runtimeconfig.dev.json
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/bin/Debug/netcoreapp2.0/Conversions.dll
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/bin/Debug/netcoreapp2.0/Conversions.pdb
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/obj/Debug/netcoreapp2.0/Conversions.csproj.CoreCompileInputs.cache
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/obj/Debug/netcoreapp2.0/Conversions.AssemblyInfoInputs.cache
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/obj/Debug/netcoreapp2.0/Conversions.AssemblyInfo.cs
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/obj/Debug/netcoreapp2.0/Conversions.dll
+/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/obj/Debug/netcoreapp2.0/Conversions.pdb

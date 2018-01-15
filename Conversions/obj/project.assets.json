@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tahiramahmood/Documents/_Git/Conversions/Conversions.csproj",
+      "projectUniqueName": "/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/Conversions.csproj",
       "projectName": "Conversions",
-      "projectPath": "/Users/tahiramahmood/Documents/_Git/Conversions/Conversions.csproj",
+      "projectPath": "/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/Conversions.csproj",
       "packagesPath": "/Users/tahiramahmood/.nuget/packages/",
-      "outputPath": "/Users/tahiramahmood/Documents/_Git/Conversions/obj/",
+      "outputPath": "/Users/tahiramahmood/Documents/_Git/DataCon/Conversions/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
