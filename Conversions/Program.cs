@@ -14,9 +14,10 @@ namespace Conversions
     {
         public static void Main(string[] args)
         {
-            using(var reader = new StreamReader("Deal.csv"))
+            /*using( var reader = new StreamReader("Deal.csv"))
             {
                 List<string> one = new List<string>();
+                List<string> two = new List<string>();
 
             
             while(!reader.EndOfStream)
@@ -25,9 +26,16 @@ namespace Conversions
                 var values = line.Split('|');
                 one.Add(values[0]);
 
+                var linetwo = reader.ReadLine();
+                var valtwo = linetwo.Split('|').Skip(1);
+                two.Add(values[0]);
+
                 Console.WriteLine(string.Join("\t", one.Cast<string>().ToArray()));
+                Console.WriteLine(string.Join("\t", two.Cast<string>().ToArray()));
             }
-            }
+            }*/
+            CsvConv.ReadFile();
+
         }
     }
 }
