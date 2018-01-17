@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 
 namespace Conversions
@@ -55,8 +56,49 @@ namespace Conversions
                     Console.Write(row[x].ToString() + " ");
                 }
             }
-
+            DataTableToJSON(dtCsv);
              return dtCsv;
+        }
+
+        public static string DataTableToJSON(DataTable dtCsv)
+        {
+            var JSONString = new StringBuilder();
+            if (dtCsv.Rows.Count > 0)
+            {
+                JSONString.Append("[");
+                for (int i = 0; i < dtCsv.Rows.Count; i++)
+                {
+                    JSONString.Append("{");
+                    for (int j = 0; j < dtCsv.Columns.Count; j++)
+                    {
+                        if (j < dtCsv.Columns.Count - 1)
+                        {
+                            JSONString.Append("\"" + dtCsv.Columns[j].ColumnName.ToString() + "\":" + "\"" + dtCsv.Rows[i][j].ToString() + "\",");
+                        }
+                        else if (j == dtCsv.Columns.Count - 1)
+                        {
+                            JSONString.Append("\"" + dtCsv.Columns[j].ColumnName.ToString() + "\":" + "\"" + dtCsv.Rows[i][j].ToString() + "\"");
+                        }
+                    }
+                    if (i == dtCsv.Rows.Count - 1)
+                    {
+                    JSONString.Append("}");
+                    }
+                    else
+                    {
+                    JSONString.Append("},");
+                    }
+                }
+                JSONString.Append("]");
+            }
+            FileStream Sjson = new FileStream ("Deal.json", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter addJ= new StreamWriter(Sjson);
+            Console.SetOut(addJ);
+            Console.Write(JSONString.ToString());
+            Console.SetOut(Console.Out);
+            addJ.Close();
+            Sjson.Close();
+            return JSONString.ToString();
         }
     }
 }
