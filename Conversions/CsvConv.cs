@@ -18,7 +18,7 @@ namespace Conversions
             {
                 while (!sr.EndOfStream)
                 {
-            Fulltext = sr.ReadToEnd().ToString(); //read full file text
+            Fulltext = sr.ReadToEnd().ToString(); //read full file text and convert to string
                     string[] rows = Fulltext.Split('\n'); //split full file text into rows
 
                     for (int i = 0; i < rows.Count(); i++)
