@@ -19,21 +19,24 @@ namespace Conversions
                 {
             Fulltext = sr.ReadToEnd().ToString(); //read full file text
                     string[] rows = Fulltext.Split('\n'); //split full file text into rows
-                    
-                    for (int i = 0; i < rows.Count() - 1; i++)
+
+                    for (int i = 0; i < rows.Count(); i++)
                     {
-                        string[] rowValues = rows[i].Split('|'); //split each row with comma to get individual values  
+                        string[] rowValues = rows[i].Split("||"); //split each row with lne to get individual values  
                         {
+                            DataRow dh = dtCsv.NewRow();
+                            DataRow dr = dtCsv.NewRow();
                             if (i == 0)
                             {
                                 for (int j = 0; j < rowValues.Count(); j++)
                                 {
-                                    dtCsv.Columns.Add(rowValues[j]); //add headers
+                                    dtCsv.Columns.Add(rowValues[j]);
+                                    dh[j] = rowValues[j].ToString();
                                 }
+                                dtCsv.Rows.Add(dh);
                             }
-                            else
+                            if (i>0)
                             {
-                                DataRow dr = dtCsv.NewRow();
                                 for (int k = 0; k < rowValues.Count(); k++)
                                 {
                                     dr[k] = rowValues[k].ToString();
